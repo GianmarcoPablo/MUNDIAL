@@ -1,0 +1,216 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::before, *::after{
+  box-sizing: inherit;
+}
+.container{
+  max-width: 1200px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+.navegacion-principal{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navegacion-principal__titulo{
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+  border-bottom: 1px solid #e1e1e1;
+  text-transform: uppercase;
+}
+.navegacion-principal__enlaces{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  border-block: 1px solid #e1e1e1;
+  padding: 1rem;
+}
+.navegacion-principal__enlaces a{
+  text-decoration: none;
+  color: #000;
+  font-weight: bold;
+}
+.navegacion-principal__enlaces .activo{
+  background-color: #1F8661;
+  color: wheat;
+  padding: 0.5rem;
+}
+
+@media (min-width: 768px) {
+  .navegacion-principal{
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 1.2rem;
+  }
+  .navegacion-principal__titulo h2{
+    padding: 1rem;
+  }
+  .navegacion-principal__enlaces{
+    gap: 2rem;
+  }
+}
+
+.hero {
+  display: flex;
+  flex-direction: column; /* Establecer dirección de columna para dispositivos móviles */
+}
+
+
+.hero__info {
+  order: 2; /* Cambiar el orden a 2 en dispositivos móviles */
+}
+.hero__info h1{
+  font-size: 6rem;
+  text-align: center;
+  font-weight: 700;
+  margin-block: 1.5rem;
+}
+.hero__info p{
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+.hero__btn{
+  display: block;
+  margin: 0 auto;
+  padding-inline: 2.5rem;
+  padding-block: 0.8rem;
+  background-color: #1F8661;
+  color: white;
+  border: none;
+  text-decoration: none;
+  margin-bottom: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hero__imagen {
+  order: 1; /* Cambiar el orden a 1 en dispositivos móviles */
+  margin-top: 2rem;
+}
+
+.hero__activo{
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.hero__iconos{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-block: 3rem;
+}
+.hero__iconos img{
+  width: 70px;
+  margin: 0 0.5rem;
+  
+}
+@media (min-width: 768px) {
+  .hero{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .hero__info{
+    order: 1;
+  }
+  .hero__info h1{
+    text-align: left;
+    font-size: 8rem;
+  }
+  .hero__info p{
+    text-align: left;
+    font-size: 1.3rem;
+    font-weight: normal;
+  }
+  .hero__btn{
+    margin-inline: 0;
+    margin-bottom: 2rem;
+  }
+  .hero__imagen{
+    display: flex;
+    justify-content: end;
+    order: 2;
+  }
+  .hero__iconos{
+    justify-content: flex-start;
+  }
+}
+
+.text-games{
+  text-align: center;
+  margin-block: 2.5rem;
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+.games{
+  margin-bottom: 3rem;
+  border-bottom: 2px solid #e1e1e1;
+  padding: 3rem;
+}
+.games img{
+  width: 70px;
+}
+.fecha{
+  text-align: center;
+  font-weight: bold;
+  margin-bottom: 2rem;
+}
+.games__grid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  place-items: center;
+}
+.paises{
+  text-align: center;
+  font-weight: bold;
+  margin-top: 1rem;
+}
+
+.versus{
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+  .games{
+    border-block: 0.5px solid #1F8661;
+  }
+  .games__grid{
+    margin-right: 0;
+    padding-right: 0;
+  }
+  .games img{
+    width: 200px;
+  }
+  .versus{
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+  }
+  .paises{
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  .fecha{
+    text-align: center;
+    font-weight: normal;
+    font-size: 2rem;
+  }
+  
+  
+  
+  
+}
